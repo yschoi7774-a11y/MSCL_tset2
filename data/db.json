@@ -87,6 +87,22 @@
       "department": "마케팅팀",
       "position": "사원",
       "memo": "육아휴직 중"
+    },
+    {
+      "id": 1776998685589,
+      "name": "김동은",
+      "joinDate": "2026-04-01",
+      "department": "물류팀",
+      "position": "사원",
+      "memo": ""
+    },
+    {
+      "id": 1776998703709,
+      "name": "양효진",
+      "joinDate": "2026-04-01",
+      "department": "마케팅팀",
+      "position": "사원",
+      "memo": ""
     }
   ],
   "allocations": [

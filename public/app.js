@@ -1231,7 +1231,12 @@ function renderAdminView() {
     const usedItems = periodUsages.length > 0
       ? periodUsages.sort((a, b) => b.startDate.localeCompare(a.startDate))
           .slice(0, 3)
-          .map(u => `<div class="usage-mini">${fmt(u.startDate)} · ${u.days}일 (${u.type})</div>`)
+          .map(u => {
+            const dateStr = u.endDate && u.endDate !== u.startDate
+              ? `${fmt(u.startDate)} ~ ${fmt(u.endDate)}`
+              : fmt(u.startDate);
+            return `<div class="usage-mini">${dateStr} · ${u.days}일 (${u.type})</div>`;
+          })
           .join('') + (periodUsages.length > 3 ? `<div class="usage-mini text-muted">+${periodUsages.length - 3}건 더</div>` : '')
       : '<span class="text-muted" style="font-size:0.78rem;">없음</span>';
 
@@ -1289,15 +1294,6 @@ function renderAdminView() {
         <tbody>
           ${rows || '<tr><td colspan="8" class="empty-table">해당하는 직원이 없습니다.</td></tr>'}
         </tbody>
-        <tfoot>
-          <tr class="total-row">
-            <td colspan="3"><strong>합계 (${filtered.length}명)</strong></td>
-            <td class="num-center"><strong>${totalAllocated}</strong>일</td>
-            <td class="num-center"><strong>${totalUsed}</strong>일</td>
-            <td class="num-center"><strong>${totalRemaining}</strong>일</td>
-            <td colspan="2"></td>
-          </tr>
-        </tfoot>
       </table>
     </div>
   `;
