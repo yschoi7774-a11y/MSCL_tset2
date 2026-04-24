@@ -304,7 +304,9 @@ function renderMain() {
     .map(y => `<option value="${y}" ${y === state.year ? 'selected' : ''}>${y}년</option>`).join('');
 
   const remainCard = s.validRemaining <= 0 ? 'card-remain-empty' : s.validRemaining <= 3 ? 'card-remain-warn' : 'card-remain';
-  const remainSub  = s.validRemaining <= 0 ? '⚠️ 연차 소진' : s.validRemaining <= 3 ? '⚠️' : '정상 (유효기간 내)';
+  const remainSub  = s.validRemaining <= 0
+    ? (s.totalValidAllocated === 0 ? '연차 발생 전' : '⚠️ 연차 소진')
+    : s.validRemaining <= 3 ? '⚠️' : '정상 (유효기간 내)';
   const meta = [
     `입사일: ${fmt(emp.joinDate)}`,
     `근속: ${servicePeriod(emp.joinDate)}`,
