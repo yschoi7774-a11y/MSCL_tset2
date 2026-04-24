@@ -183,7 +183,7 @@ function getSummary() {
     .map(a => ({ ...a, expiryDate: expiryOf(a) }));
   const allUsages = state.usages.filter(u => u.employeeId === state.selectedId);
 
-  const annualAllocs = allAllocs.filter(a => !a.type || a.type === '연차');
+  const annualAllocs = allAllocs.filter(a => !a.type || a.type === '연차' || a.type === '관리자조정');
   const specialAllocs = allAllocs.filter(a => a.type === '특별휴가');
   const specialUsages = allUsages.filter(u => u.type === '특별휴가');
 
@@ -207,9 +207,12 @@ function getSummary() {
   const yearUsages = allUsages.filter(u =>
     (u.startDate || '').startsWith(String(state.year))
   );
+  const yearAdminAdj = allUsages.filter(u =>
+    u.type === '관리자조정' && (u.startDate || '').startsWith(String(state.year))
+  );
 
   const empCompLeaves = state.compLeaves.filter(c => c.employeeId === state.selectedId);
-  return { totalValidAllocated, totalUsed, validRemaining, allocs: yearAllocs, usages: yearUsages, compLeaves: empCompLeaves, specialTotal, specialUsed, specialRemaining };
+  return { totalValidAllocated, totalUsed, validRemaining, allocs: yearAllocs, usages: yearUsages, adminAdj: yearAdminAdj, compLeaves: empCompLeaves, specialTotal, specialUsed, specialRemaining };
 }
 
 // ── 사이드바 렌더 ──────────────────────────────────
@@ -372,7 +375,7 @@ function renderMain() {
         <button class="tab-btn ${state.tab === 'usages' ? 'active' : ''}"
                 onclick="switchTab('usages')">사용 내역 (${s.usages.length})</button>
         <button class="tab-btn ${state.tab === 'allocs' ? 'active' : ''}"
-                onclick="switchTab('allocs')">발생 내역 (${s.allocs.length})</button>
+                onclick="switchTab('allocs')">발생 내역 (${s.allocs.length + s.adminAdj.length})</button>
         <button class="tab-btn ${state.tab === 'comp' ? 'active' : ''}"
                 onclick="switchTab('comp')">대체휴가 (${s.compLeaves.filter(c => !c.used).length}건 미사용)</button>
       </div>
@@ -392,7 +395,7 @@ function renderMain() {
               <button class="btn btn-primary btn-sm" onclick="showAllocModal()">+ 직접 등록</button>
             </div>
           </div>
-          ${renderAllocsTable(s.allocs)}
+          ${renderAllocsTable(s.allocs, s.adminAdj)}
         </div>
         <div class="tab-pane ${state.tab === 'comp' ? 'active' : ''}">
           ${renderCompLeavesTab(s.compLeaves)}
@@ -446,6 +449,7 @@ function deductionBadge(u) {
 }
 
 function renderUsagesTable(usages) {
+  usages = usages.filter(u => u.type !== '관리자조정');
   if (!usages.length) return '<p class="empty-table">사용 내역이 없습니다.</p>';
   const rows = [...usages]
     .sort((a, b) => (b.startDate || '').localeCompare(a.startDate || ''))
@@ -473,11 +477,11 @@ function renderUsagesTable(usages) {
     </table>`;
 }
 
-function renderAllocsTable(allocs) {
-  if (!allocs.length) return '<p class="empty-table">발생 내역이 없습니다.</p>';
+function renderAllocsTable(allocs, adminAdj = []) {
+  if (!allocs.length && !adminAdj.length) return '<p class="empty-table">발생 내역이 없습니다.</p>';
   const today = new Date().toISOString().slice(0, 10);
 
-  const rows = [...allocs]
+  const allocRows = [...allocs]
     .sort((a, b) => (b.generatedDate || '').localeCompare(a.generatedDate || ''))
     .map(a => {
       const isSpecial = a.type === '특별휴가';
@@ -511,12 +515,34 @@ function renderAllocsTable(allocs) {
         </tr>`;
     }).join('');
 
+  const adjRows = [...adminAdj]
+    .sort((a, b) => (b.startDate || '').localeCompare(a.startDate || ''))
+    .map(u => {
+      const sign = u.days > 0 ? '-' : '+';
+      const absDays = Math.abs(u.days);
+      return `
+        <tr>
+          <td>${typeBadge('관리자조정')}</td>
+          <td>${fmt(u.startDate)}</td>
+          <td>-</td>
+          <td>-</td>
+          <td><strong style="color:${u.days > 0 ? '#EF4444' : '#10B981'}">${sign}${absDays}일</strong></td>
+          <td>-</td>
+          <td>${u.reason || '-'}</td>
+          <td>
+            <div class="actions">
+              <button class="btn btn-danger btn-sm" onclick="deleteUsage(${u.id})">삭제</button>
+            </div>
+          </td>
+        </tr>`;
+    }).join('');
+
   return `
     <table class="data-table">
       <thead><tr>
         <th>유형</th><th>발생일</th><th>법정</th><th>추가</th><th>합계</th><th>만료일</th><th>비고</th><th></th>
       </tr></thead>
-      <tbody>${rows}</tbody>
+      <tbody>${allocRows}${adjRows}</tbody>
     </table>`;
 }
 
@@ -1090,13 +1116,14 @@ async function saveAdjust(empId, currentRemaining) {
     // 잔여 증가 → 발생 내역 추가
     await api.post('/api/allocations', {
       employeeId: empId,
+      type: '관리자조정',
       year: Number(today.slice(0, 4)),
       generatedDate: today,
       legalDays: diff,
       additionalDays: 0,
       totalDays: diff,
       expiryDate: today.slice(0, 4) + '-12-31',
-      note: `관리자 조정: ${reason}`,
+      note: reason,
     });
   } else {
     // 잔여 감소 → 사용 내역 추가 (관리자 차감)
@@ -1187,7 +1214,7 @@ function renderAdminView() {
     const allUsages = state.usages.filter(u => u.employeeId === emp.id);
 
     // 기간 필터 적용한 사용 내역
-    let periodUsages = allUsages;
+    let periodUsages = allUsages.filter(u => u.type !== '관리자조정');
     if (year || month) periodUsages = periodUsages.filter(u => overlapsMonth(u, year, month));
 
     const validAllocated = allAllocs.filter(a => a.expiryDate >= today)
