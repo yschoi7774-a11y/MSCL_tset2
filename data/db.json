@@ -1,0 +1,735 @@
+{
+  "employees": [
+    {
+      "id": 1776667661785,
+      "name": "정수아",
+      "joinDate": "2025-10-14",
+      "department": "서포트팀",
+      "position": "사원",
+      "memo": ""
+    },
+    {
+      "id": 1776668533977,
+      "name": "임서연",
+      "joinDate": "2025-10-25",
+      "department": "마케팅팀",
+      "position": "사원",
+      "memo": ""
+    },
+    {
+      "id": 1776668907671,
+      "name": "최영수",
+      "joinDate": "2026-01-04",
+      "department": "서포트팀",
+      "position": "이사",
+      "memo": ""
+    },
+    {
+      "id": 1776671061089,
+      "name": "오오쿠라 노조미",
+      "joinDate": "2025-06-30",
+      "department": "서포트팀",
+      "position": "팀장보",
+      "memo": ""
+    },
+    {
+      "id": 1776671233262,
+      "name": "TEN",
+      "joinDate": "2026-01-07",
+      "department": "마케팅팀",
+      "position": "사원",
+      "memo": ""
+    },
+    {
+      "id": 1776671270879,
+      "name": "이승구",
+      "joinDate": "2025-01-06",
+      "department": "물류팀",
+      "position": "사원",
+      "memo": ""
+    },
+    {
+      "id": 1776746131150,
+      "name": "문규하",
+      "joinDate": "2020-01-06",
+      "department": "서포트팀",
+      "position": "팀장보",
+      "memo": ""
+    },
+    {
+      "id": 1776746163610,
+      "name": "마에다 아이",
+      "joinDate": "2023-11-01",
+      "department": "마케팅팀",
+      "position": "주임",
+      "memo": ""
+    },
+    {
+      "id": 1776746203594,
+      "name": "우현식",
+      "joinDate": "2024-03-04",
+      "department": "마케팅팀",
+      "position": "대리",
+      "memo": ""
+    },
+    {
+      "id": 1776756535684,
+      "name": "박지회",
+      "joinDate": "2020-04-20",
+      "department": "마케팅팀",
+      "position": "팀장",
+      "memo": ""
+    },
+    {
+      "id": 1776990567131,
+      "name": "아라이 카에데",
+      "joinDate": "2021-08-01",
+      "department": "마케팅팀",
+      "position": "사원",
+      "memo": "육아휴직 중"
+    }
+  ],
+  "allocations": [
+    {
+      "id": 1776667661789.476,
+      "employeeId": 1776667661785,
+      "year": 2026,
+      "generatedDate": "2026-04-14",
+      "legalDays": 10,
+      "additionalDays": 0,
+      "totalDays": 10,
+      "expiryDate": "2028-04-14",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776671061099.5786,
+      "employeeId": 1776671061089,
+      "year": 2025,
+      "generatedDate": "2025-12-30",
+      "legalDays": 10,
+      "additionalDays": 0,
+      "totalDays": 10,
+      "expiryDate": "2027-12-30",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776671270882.174,
+      "employeeId": 1776671270879,
+      "year": 2025,
+      "generatedDate": "2025-07-06",
+      "legalDays": 10,
+      "additionalDays": 0,
+      "totalDays": 10,
+      "expiryDate": "2027-07-06",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776746131156.6365,
+      "employeeId": 1776746131150,
+      "year": 2020,
+      "generatedDate": "2020-07-06",
+      "legalDays": 10,
+      "additionalDays": 0,
+      "totalDays": 10,
+      "expiryDate": "2022-07-06",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776746131156.6453,
+      "employeeId": 1776746131150,
+      "year": 2021,
+      "generatedDate": "2021-07-06",
+      "legalDays": 11,
+      "additionalDays": 0,
+      "totalDays": 11,
+      "expiryDate": "2023-07-06",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776746131156.1194,
+      "employeeId": 1776746131150,
+      "year": 2022,
+      "generatedDate": "2022-07-06",
+      "legalDays": 12,
+      "additionalDays": 0,
+      "totalDays": 12,
+      "expiryDate": "2024-07-06",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776746131156.5676,
+      "employeeId": 1776746131150,
+      "year": 2023,
+      "generatedDate": "2023-07-06",
+      "legalDays": 14,
+      "additionalDays": 0,
+      "totalDays": 14,
+      "expiryDate": "2025-07-06",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776746131156.7793,
+      "employeeId": 1776746131150,
+      "year": 2024,
+      "generatedDate": "2024-07-06",
+      "legalDays": 16,
+      "additionalDays": 0,
+      "totalDays": 16,
+      "expiryDate": "2026-07-06",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776746131156.6033,
+      "employeeId": 1776746131150,
+      "year": 2025,
+      "generatedDate": "2025-07-06",
+      "legalDays": 18,
+      "additionalDays": 0,
+      "totalDays": 18,
+      "expiryDate": "2027-07-06",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776746163613.9153,
+      "employeeId": 1776746163610,
+      "year": 2024,
+      "generatedDate": "2024-05-01",
+      "legalDays": 10,
+      "additionalDays": 0,
+      "totalDays": 10,
+      "expiryDate": "2026-05-01",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776746163613.276,
+      "employeeId": 1776746163610,
+      "year": 2025,
+      "generatedDate": "2025-05-01",
+      "legalDays": 11,
+      "additionalDays": 0,
+      "totalDays": 11,
+      "expiryDate": "2027-05-01",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776746203599.2715,
+      "employeeId": 1776746203594,
+      "year": 2024,
+      "generatedDate": "2024-09-04",
+      "legalDays": 10,
+      "additionalDays": 0,
+      "totalDays": 10,
+      "expiryDate": "2026-09-04",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776746203599.151,
+      "employeeId": 1776746203594,
+      "year": 2025,
+      "generatedDate": "2025-09-04",
+      "legalDays": 11,
+      "additionalDays": 0,
+      "totalDays": 11,
+      "expiryDate": "2027-09-04",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776756535689.7979,
+      "employeeId": 1776756535684,
+      "year": 2020,
+      "generatedDate": "2020-10-20",
+      "legalDays": 10,
+      "additionalDays": 0,
+      "totalDays": 10,
+      "expiryDate": "2022-10-20",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776756535689.86,
+      "employeeId": 1776756535684,
+      "year": 2021,
+      "generatedDate": "2021-10-20",
+      "legalDays": 11,
+      "additionalDays": 0,
+      "totalDays": 11,
+      "expiryDate": "2023-10-20",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776756535689.774,
+      "employeeId": 1776756535684,
+      "year": 2022,
+      "generatedDate": "2022-10-20",
+      "legalDays": 12,
+      "additionalDays": 0,
+      "totalDays": 12,
+      "expiryDate": "2024-10-20",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776756535689.0225,
+      "employeeId": 1776756535684,
+      "year": 2023,
+      "generatedDate": "2023-10-20",
+      "legalDays": 14,
+      "additionalDays": 0,
+      "totalDays": 14,
+      "expiryDate": "2025-10-20",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776756535689.3425,
+      "employeeId": 1776756535684,
+      "year": 2024,
+      "generatedDate": "2024-10-20",
+      "legalDays": 16,
+      "additionalDays": 0,
+      "totalDays": 16,
+      "expiryDate": "2026-10-20",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776756535689.8872,
+      "employeeId": 1776756535684,
+      "year": 2025,
+      "generatedDate": "2025-10-20",
+      "legalDays": 18,
+      "additionalDays": 0,
+      "totalDays": 18,
+      "expiryDate": "2027-10-20",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776990567138.6743,
+      "employeeId": 1776990567131,
+      "year": 2022,
+      "generatedDate": "2022-02-01",
+      "legalDays": 10,
+      "additionalDays": 0,
+      "totalDays": 10,
+      "expiryDate": "2024-02-01",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776990567138.318,
+      "employeeId": 1776990567131,
+      "year": 2023,
+      "generatedDate": "2023-02-01",
+      "legalDays": 11,
+      "additionalDays": 0,
+      "totalDays": 11,
+      "expiryDate": "2025-02-01",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776990567138.076,
+      "employeeId": 1776990567131,
+      "year": 2024,
+      "generatedDate": "2024-02-01",
+      "legalDays": 12,
+      "additionalDays": 0,
+      "totalDays": 12,
+      "expiryDate": "2026-02-01",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776990567138.6707,
+      "employeeId": 1776990567131,
+      "year": 2025,
+      "generatedDate": "2025-02-01",
+      "legalDays": 14,
+      "additionalDays": 0,
+      "totalDays": 14,
+      "expiryDate": "2027-02-01",
+      "note": "자동생성"
+    },
+    {
+      "id": 1776990567138.315,
+      "employeeId": 1776990567131,
+      "year": 2026,
+      "generatedDate": "2026-02-01",
+      "legalDays": 16,
+      "additionalDays": 0,
+      "totalDays": 16,
+      "expiryDate": "2028-02-01",
+      "note": "자동생성"
+    }
+  ],
+  "usages": [
+    {
+      "id": 1776667702596,
+      "employeeId": 1776667661785,
+      "startDate": "2026-04-30",
+      "endDate": "2026-04-30",
+      "days": 0.5,
+      "type": "오후반차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-20T06:48:22.596Z"
+    },
+    {
+      "id": 1776667727829,
+      "employeeId": 1776667661785,
+      "startDate": "2026-05-01",
+      "endDate": "2026-05-01",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-20T06:48:47.829Z"
+    },
+    {
+      "id": 1776746375210,
+      "employeeId": 1776746163610,
+      "startDate": "2026-05-01",
+      "endDate": "2026-05-01",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사유",
+      "registeredAt": "2026-04-21T04:39:35.210Z"
+    },
+    {
+      "id": 1776746429328,
+      "employeeId": 1776671061089,
+      "startDate": "2026-05-29",
+      "endDate": "2026-06-01",
+      "days": 3,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-21T04:40:29.328Z"
+    },
+    {
+      "id": 1776746598072,
+      "employeeId": 1776667661785,
+      "startDate": "2026-05-07",
+      "endDate": "2026-05-08",
+      "days": 2,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-21T04:43:18.072Z"
+    },
+    {
+      "id": 1776927079348,
+      "employeeId": 1776746203594,
+      "startDate": "2026-04-30",
+      "endDate": "2026-04-30",
+      "days": 1,
+      "type": "대체휴가",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-23T06:51:19.348Z",
+      "compLeaveId": 1776927044506
+    },
+    {
+      "id": 1776927242233,
+      "employeeId": 1776746203594,
+      "startDate": "2026-05-01",
+      "endDate": "2026-05-01",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-23T06:54:02.233Z"
+    },
+    {
+      "id": 1776990826896,
+      "employeeId": 1776746131150,
+      "startDate": "2026-01-26",
+      "endDate": "2026-01-26",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T00:33:46.896Z"
+    },
+    {
+      "id": 1776990857160,
+      "employeeId": 1776746131150,
+      "startDate": "2026-01-29",
+      "endDate": "2026-01-30",
+      "days": 2,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T00:34:17.160Z"
+    },
+    {
+      "id": 1776991209942,
+      "employeeId": 1776746131150,
+      "startDate": "2026-02-04",
+      "endDate": "2026-02-04",
+      "days": 0.5,
+      "type": "오후반차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T00:40:09.942Z"
+    },
+    {
+      "id": 1776991241614,
+      "employeeId": 1776746131150,
+      "startDate": "2026-02-25",
+      "endDate": "2026-02-25",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T00:40:41.614Z"
+    },
+    {
+      "id": 1776991270810,
+      "employeeId": 1776746131150,
+      "startDate": "2026-03-06",
+      "endDate": "2026-03-06",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T00:41:10.810Z"
+    },
+    {
+      "id": 1776991352195,
+      "employeeId": 1776746131150,
+      "startDate": "2026-04-09",
+      "endDate": "2026-04-09",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T00:42:32.195Z"
+    },
+    {
+      "id": 1776991365344,
+      "employeeId": 1776746131150,
+      "startDate": "2026-04-21",
+      "endDate": "2026-04-21",
+      "days": 0.5,
+      "type": "오전반차",
+      "reason": "병원",
+      "registeredAt": "2026-04-24T00:42:45.344Z"
+    },
+    {
+      "id": 1776992586927,
+      "employeeId": 1776746131150,
+      "startDate": "2026-04-24",
+      "endDate": "2026-04-24",
+      "days": 11,
+      "type": "관리자조정",
+      "reason": "2026년 이전 사용분 반영",
+      "registeredAt": "2026-04-24T01:03:06.927Z"
+    },
+    {
+      "id": 1776993681409,
+      "employeeId": 1776756535684,
+      "startDate": "2026-01-08",
+      "endDate": "2026-01-13",
+      "days": 3,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T01:21:21.409Z"
+    },
+    {
+      "id": 1776993723853,
+      "employeeId": 1776756535684,
+      "startDate": "2026-04-24",
+      "endDate": "2026-04-24",
+      "days": 12.5,
+      "type": "관리자조정",
+      "reason": "2026년 이전 사용분 반영",
+      "registeredAt": "2026-04-24T01:22:03.853Z"
+    },
+    {
+      "id": 1776993825477,
+      "employeeId": 1776990567131,
+      "startDate": "2026-04-24",
+      "endDate": "2026-04-24",
+      "days": 6,
+      "type": "관리자조정",
+      "reason": "휴직 이전 사용분 반영",
+      "registeredAt": "2026-04-24T01:23:45.477Z"
+    },
+    {
+      "id": 1776993910218,
+      "employeeId": 1776671061089,
+      "startDate": "2026-03-25",
+      "endDate": "2026-03-25",
+      "days": 0.5,
+      "type": "오후반차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T01:25:10.218Z"
+    },
+    {
+      "id": 1776993956440,
+      "employeeId": 1776746203594,
+      "startDate": "2026-01-05",
+      "endDate": "2026-01-05",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T01:25:56.440Z"
+    },
+    {
+      "id": 1776993975079,
+      "employeeId": 1776746203594,
+      "startDate": "2026-01-29",
+      "endDate": "2026-01-30",
+      "days": 2,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T01:26:15.079Z"
+    },
+    {
+      "id": 1776994009125,
+      "employeeId": 1776746203594,
+      "startDate": "2026-02-09",
+      "endDate": "2026-02-09",
+      "days": 0.5,
+      "type": "오후반차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T01:26:49.125Z"
+    },
+    {
+      "id": 1776994048266,
+      "employeeId": 1776746203594,
+      "startDate": "2026-03-03",
+      "endDate": "2026-03-03",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T01:27:28.266Z"
+    },
+    {
+      "id": 1776994063801,
+      "employeeId": 1776746203594,
+      "startDate": "2026-03-11",
+      "endDate": "2026-03-11",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T01:27:43.801Z"
+    },
+    {
+      "id": 1776994144663,
+      "employeeId": 1776746203594,
+      "startDate": "2026-04-24",
+      "endDate": "2026-04-24",
+      "days": 12,
+      "type": "관리자조정",
+      "reason": "2026년 이전 사용분 반영",
+      "registeredAt": "2026-04-24T01:29:04.663Z"
+    },
+    {
+      "id": 1776994728036,
+      "employeeId": 1776671270879,
+      "startDate": "2026-02-16",
+      "endDate": "2026-02-18",
+      "days": 3,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T01:38:48.036Z"
+    },
+    {
+      "id": 1776994980462,
+      "employeeId": 1776668533977,
+      "startDate": "2026-03-16",
+      "endDate": "2026-03-16",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "deductionType": "nextAlloc",
+      "excessDays": 1,
+      "registeredAt": "2026-04-24T01:43:00.462Z"
+    },
+    {
+      "id": 1776995011581,
+      "employeeId": 1776668533977,
+      "startDate": "2026-04-20",
+      "endDate": "2026-04-20",
+      "days": 0.5,
+      "type": "오전반차",
+      "reason": "비자 연장",
+      "deductionType": "nextAlloc",
+      "excessDays": 0.5,
+      "registeredAt": "2026-04-24T01:43:31.581Z"
+    },
+    {
+      "id": 1776995236564,
+      "employeeId": 1776746163610,
+      "startDate": "2026-01-09",
+      "endDate": "2026-01-09",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T01:47:16.564Z"
+    },
+    {
+      "id": 1776995252730,
+      "employeeId": 1776746163610,
+      "startDate": "2026-02-16",
+      "endDate": "2026-02-16",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T01:47:32.730Z"
+    },
+    {
+      "id": 1776995268696,
+      "employeeId": 1776746163610,
+      "startDate": "2026-03-02",
+      "endDate": "2026-03-02",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T01:47:48.696Z"
+    },
+    {
+      "id": 1776995282084,
+      "employeeId": 1776746163610,
+      "startDate": "2026-03-10",
+      "endDate": "2026-03-10",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T01:48:02.084Z"
+    },
+    {
+      "id": 1776995294877,
+      "employeeId": 1776746163610,
+      "startDate": "2026-03-27",
+      "endDate": "2026-03-27",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T01:48:14.877Z"
+    },
+    {
+      "id": 1776995314048,
+      "employeeId": 1776746163610,
+      "startDate": "2026-04-14",
+      "endDate": "2026-04-14",
+      "days": 1,
+      "type": "연차",
+      "reason": "개인 사정",
+      "registeredAt": "2026-04-24T01:48:34.048Z"
+    },
+    {
+      "id": 1776995354695,
+      "employeeId": 1776746163610,
+      "startDate": "2026-04-24",
+      "endDate": "2026-04-24",
+      "days": 11.5,
+      "type": "관리자조정",
+      "reason": "2026년 이전 사용분 반영",
+      "registeredAt": "2026-04-24T01:49:14.695Z"
+    },
+    {
+      "id": 1776995839791,
+      "employeeId": 1776671270879,
+      "startDate": "2026-04-24",
+      "endDate": "2026-04-24",
+      "days": 6.5,
+      "type": "관리자조정",
+      "reason": "2026년 이전 사용분 반영",
+      "registeredAt": "2026-04-24T01:57:19.791Z"
+    }
+  ],
+  "compLeaves": [
+    {
+      "id": 1776927044506,
+      "used": true,
+      "employeeId": 1776746203594,
+      "type": "대체휴가",
+      "generatedDate": "2026-04-10",
+      "workContent": "베베스완 대표 수행"
+    }
+  ]
+}

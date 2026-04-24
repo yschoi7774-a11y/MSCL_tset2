@@ -1,0 +1,12 @@
+{
+  "name": "leave-manager",
+  "version": "1.0.0",
+  "description": "직원 연차관리 시스템",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

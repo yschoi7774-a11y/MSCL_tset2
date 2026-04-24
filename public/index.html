@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연차관리 시스템</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 로그인 오버레이 -->
+  <div class="login-overlay" id="loginOverlay">
+    <div class="login-box">
+      <div class="login-title">📋 연차관리 시스템</div>
+      <div class="login-form">
+        <input type="text" id="loginId" placeholder="아이디" autocomplete="username">
+        <input type="password" id="loginPw" placeholder="비밀번호" autocomplete="current-password" onkeydown="if(event.key==='Enter') doLogin()">
+        <div class="login-error hidden" id="loginError">아이디 또는 비밀번호가 올바르지 않습니다.</div>
+        <button class="btn btn-primary w-full" onclick="doLogin()">로그인</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="brand-text">
+          <div class="brand-name">mothersmile</div>
+          <div class="brand-sub">연차관리 시스템</div>
+        </div>
+      </div>
+      <span class="header-sub" id="headerSub"></span>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <button class="nav-btn active" id="btn-employees" onclick="switchView('employees')">직원 관리</button>
+    <button class="nav-btn" id="btn-admin" onclick="switchView('admin')">관리자 조회</button>
+  </nav>
+
+  <!-- 직원 관리 뷰 -->
+  <div class="layout" id="empLayout">
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <button class="btn btn-primary w-full" onclick="showEmployeeModal()">+ 직원 추가</button>
+        <input type="text" id="searchInput" placeholder="직원 검색..." oninput="renderSidebar()">
+      </div>
+      <div class="employee-list" id="employeeList"></div>
+      <div class="sort-bar" id="sortBar"></div>
+    </aside>
+    <main class="main-panel" id="mainPanel">
+      <div class="empty-state">
+        <div class="empty-icon">👥</div>
+        <p>좌측에서 직원을 선택하거나<br>새 직원을 추가하세요.</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- 관리자 조회 뷰 -->
+  <div class="admin-layout hidden" id="adminLayout">
+    <div class="admin-panel" id="adminPanel"></div>
+  </div>
+
+  <div class="modal-overlay hidden" id="modalOverlay" onclick="closeModal()">
+    <div class="modal-box" id="modalBox" onclick="event.stopPropagation()">
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
